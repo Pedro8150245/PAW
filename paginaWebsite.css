@@ -1,0 +1,39 @@
+body {
+	background-color:#FFE4C4;
+}
+
+h1 {
+	color: #000000;
+	text-align:center;
+	font-family: comic-sans;
+}
+
+p {
+	font-family:verdana;
+	font-size:16px;
+	text-align:center;
+	font-style: italic;
+}
+
+div {
+	text-align:center;
+	border-style: solid;
+	border-width: 2px;
+}
+
+footer {
+	text-align:bottom;
+	font-size:8px;
+	font-weight:bold;
+	color:#DC143C;
+	margin-top: 250px;
+}
+
+
+img {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+}
+	
