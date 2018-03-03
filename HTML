@@ -1,0 +1,1108 @@
+Curso CodeAcademy HTML:
+***********************
+
+Titulo h1:
+<h1>Pedro Costa</h1>
+
+----------------------------------------------
+
+<!DOCTYPE html>
+
+Iniciar sempre com esta tag para transmitir ao browser o tipo de documento que irá ler.
+
+
+----------------------------------------------
+
+<!DOCTYPE html>
+<html>
+
+</html>
+
+devemos inicar a tag <html> para criamos a estrutura e conteúdo do nosso documento html.
+
+TODAS AS TAGS TEM UMA TAG QUE ABRE E OUTRA QUE FECHA!
+Excepto algumas que podem auto-fechar como por exemplo: <br/> (line break)
+
+
+----------------------------------------------
+
+<p> Hello World </p> para criar parágrafos
+
+
+----------------------------------------------
+
+<head> --> head element contém a metada da página web, ou seja informação que não é apresentada na visualização da página web.
+
+Neste elemento podemos adicionar como conteúdo o titulo da página web usado a tag <title>.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pedro Costa</title>
+  </head>
+</html>
+
+
+----------------------------------------------
+
+Para adicionarmos conteúdo visível como texto,imagens,botoes,etc na nossa página web inserimos esse conteudo no elemento <body> da página que vem depois do elemento tag </head> e a tag </body> fica acima de </html>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Coding Journey</title>
+  </head>
+  <body>
+    <p>Shall I compare thee to a summer's day? Thou art more lovely and more temperate</p>
+  </body>
+</html>
+
+----------------------------------------------
+
+Self-closing tag:
+
+<br /> podemos usar em qualquer parte do código html
+
+<p>line one<br />line two</p>
+
+OUTPUT:
+
+line one
+line two
+
+Sem a tag <br /> estaria tudo na mesma linha
+
+<b /> --> bold text
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Coding Journey</title>
+  </head>
+  <body>
+    <p>Shall I compare thee to a summer's day?<br /> Thou art more lovely and more temperate</p>
+  </body>
+</html>
+
+
+----------------------------------------------
+
+Quando um elemento é contido dentro de outro elemento é considerado que é o filho desse elemento.
+
+<body>
+  <p>Paragraph</p>
+</body>
+
+o elemento <p> é filho do elemento pai <body> e pode vir a ter netos como por exemplo:
+
+<body>
+  <div>
+    <h1>Student</h1>
+    <p>Get Started</p>
+  </div>
+</body>
+
+Os elementos filhos podem ter atributos do elemento pai.
+
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Hello World</title>
+  </head>
+
+  <body>
+    <h1>Hello World</h1>
+    <p>This paragraph is a child of the body element</p>
+    <div>
+	<p>This paragraph is a child of the div element</p>
+    </div>
+  </body>
+</html>
+
+
+
+----------------------------------------------
+
+Para fazer com que o código seja organizado e fácil de ler usamos dois métodos o whitespace (dar espaços entre código e texto pois não será visivel na página web) e identação do código (para estar o mais orgazinado possível)
+
+
+MAU IDENTADO E MÁ LEITURA:
+
+<body><p>Paragraph 1</p><p>Paragraph 2</p></body>
+
+
+BEM IDENTADO E BOA LEITURA:
+
+<body>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</body>
+
+IDENTAMOS O CODIGO DENTRO DE TAGS COM 2 ESPAÇOS!!!
+
+
+
+----------------------------------------------
+
+Como comentar no código html:
+
+<!-- This is a comment that the browser will not display. -->
+
+Podemos usar comentários para explicar aŕeas do codigo ou até separar o mesmo por secções.
+
+
+--------------------------------------------------------------------------------------------
+Proximo etapa do curso:
+--------------------------------------------------------------------------------------------
+
+Existe 6 tipos de headings( titulos para apresentar na página)
+
+
+    <h1> - este é usado para o main heading (titulo principal) os outros são mais pequenos logo serão sub-headings (sub-titulos)
+    <h2>
+    <h3>
+    <h4>
+    <h5>
+    <h6>
+
+EXEMPLO: 
+
+<h1>BREAKING NEWS</h1>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <h2>About Brown Bears</h2>
+    <h3>Species</h3>
+    <h3>Features</h3>
+    <h2>Habitat</h2>
+    <h3>Countries with Large Brown Bear Populations</h3>
+    <h3>Countries with Small Brown Bear Populations</h3>
+    <h2>Media</h2>
+  </body>
+</html>
+
+
+----------------------------------------------
+
+<div> --> é usado para fazer secções no código
+
+<span> --> usado para conteúdos html pequenos que estão na mesma linha e nao se dividem em secções
+
+
+<div>
+    <p>Technology</p>
+</div>
+<div>
+  <p><span>Self-driving cars</span> are anticipated to replace up to 2 million jobs over the next two decades.</p>
+</div>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+    
+      <h2>About Brown Bears</h2>
+      <p>The brown bear (Ursus arctos) is native to parts of northern Eurasia and North America. Its conservation status is currently Least Concern. There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+      <h3>Species</h3>
+      <h3>Features</h3>
+      <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+      <h2>Habitat</h2>
+      <h3>Countries with Large Brown Bear Populations</h3>
+      <h3>Countries with Small Brown Bear Populations</h3>
+      <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+      <h2>Media</h2>
+    </div>
+  </body>
+</html>
+
+
+
+----------------------------------------------
+
+Text Style Tags --> tags para organizar ou descrever conteudo nas paginas web.
+
+<em> --> faz o efeito de italic no texto
+
+<strong> --> faz o efeito de bold no texto
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+      <h2>About Brown Bears</h2>
+      <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>. There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+      <h3>Species</h3>
+      <h3>Features</h3>
+      <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+      <h2>Habitat</h2>
+      <h3>Countries with Large Brown Bear Populations</h3>
+      <h3>Countries with Small Brown Bear Populations</h3>
+      <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+      <h2>Media</h2>
+    </div>
+  </body>
+</html>
+
+
+
+
+----------------------------------------------
+
+Line Breaks
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+      <h2>About Brown Bears</h2>
+      <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br/> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+      <h3>Species</h3>
+      <h3>Features</h3>
+      <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+      <h2>Habitat</h2>
+      <h3>Countries with Large Brown Bear Populations</h3>
+      <h3>Countries with Small Brown Bear Populations</h3>
+      <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+      <h2>Media</h2>
+    </div>
+  </body>
+</html>
+
+
+
+----------------------------------------------
+
+
+Listas não ordenadas
+
+<ul>
+  <li> --> lista individual </li>
+</ul>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+      <h2>About Brown Bears</h2>
+      <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+      <h3>Species</h3>
+      <ul>
+        <li>Arctos</li>
+        <li>Collarus</li>
+        <li>Horribilis</li>
+        <li>Nelsoni(extinct)</li>
+      </ul>
+      <h3>Features</h3>
+      <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+      <h2>Habitat</h2>
+      <h3>Countries with Large Brown Bear Populations</h3>
+      <h3>Countries with Small Brown Bear Populations</h3>
+      <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+      <h2>Media</h2>
+    </div>
+  </body>
+</html>
+
+
+
+
+----------------------------------------------
+
+
+Listas ordenadas
+
+<ol>
+  <li>Lista individual</li>
+</ol>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+      <h2>About Brown Bears</h2>
+      <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+      <h3>Species</h3>
+      <ol>
+        <li>Arctos</li>
+        <li>Collarus</li>
+        <li>Horribilis</li>
+        <li>Nelsoni (extinct)</li>
+      </ol>
+      <h3>Features</h3>
+      <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+      <h2>Habitat</h2>
+      <h3>Countries with Large Brown Bear Populations</h3>
+      <ol>
+        <li>Russia</li>
+        <li>United States</li>
+        <li>Canada</li>
+			</ol>
+      <h3>Countries with Small Brown Bear Populations</h3>
+      <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+      <h2>Media</h2>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+----------------------------------------------
+
+
+Imagens:
+
+<img src="link da imagem" />
+
+
+atributos sao feitos de duas partes:
+  - nome
+  - valor
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+      <h2>About Brown Bears</h2>
+      <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+      <h3>Species</h3>
+      <ol>
+        <li>Arctos</li>
+        <li>Collarus</li>
+        <li>Horribilis</li>
+        <li>Nelsoni (extinct)</li>
+      </ol>
+      <h3>Features</h3>
+      <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+      <h2>Habitat</h2>
+      <h3>Countries with Large Brown Bear Populations</h3>
+      <ol>
+        <li>Russia</li>
+        <li>United States</li>
+        <li>Canada</li>
+      </ol>
+      <h3>Countries with Small Brown Bear Populations</h3>
+      <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+      <h2>Media</h2>
+      <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" />
+    </div>
+  </body>
+</html>
+
+
+
+----------------------------------------------
+
+
+Alts das imagens --> descrição da imagem
+
+Também serve para identificar a imagem caso ela nao aparecer na página web.
+
+Se a imagem não tiver informação relevante não existe necessidade de usar o alt.
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brown Bears</title>
+  </head>
+  <body>
+    <h1>The Brown Bear</h1>
+    <div id="introduction">
+      <h2>About Brown Bears</h2>
+      <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+      <h3>Species</h3>
+      <ol>
+        <li>Arctos</li>
+        <li>Collarus</li>
+        <li>Horribilis</li>
+        <li>Nelsoni (extinct)</li>
+      </ol>
+      <h3>Features</h3>
+      <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+    </div>
+    <div id="habitat">
+      <h2>Habitat</h2>
+      <h3>Countries with Large Brown Bear Populations</h3>
+      <ol>
+        <li>Russia</li>
+        <li>United States</li>
+        <li>Canada</li>
+      </ol>
+      <h3>Countries with Small Brown Bear Populations</h3>
+      <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+    </div>
+    <div id="media">
+      <h2>Media</h2>
+      <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" alt="brown bear" />
+    </div>
+  </body>
+</html>
+
+
+
+
+----------------------------------------------
+
+Video:
+
+<video src="myVideo.mp4" width="320" height="240" controls>
+  Video not supported
+</video>
+
+
+usamos o width e height para definar o tamanho da janela do video.
+
+usamos o controls para o browser incluir controlos básicos de video como o pause,play e skip.
+
+o texto "Video not supported" só vai aparecer se o browser não conseguir carregar o video
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Brown Bears</title>
+</head>
+
+<body>
+  <h1>The Brown Bear</h1>
+  <div id="introduction">
+    <h2>About Brown Bears</h2>
+    <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
+      Atlas bear and the Himalayan brown bear.</p>
+    <h3>Species</h3>
+    <ol>
+      <li>Arctos</li>
+      <li>Collarus</li>
+      <li>Horribilis</li>
+      <li>Nelsoni (extinct)</li>
+    </ol>
+    <h3>Features</h3>
+    <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+  </div>
+  <div id="habitat">
+    <h2>Habitat</h2>
+    <h3>Countries with Large Brown Bear Populations</h3>
+    <ol>
+      <li>Russia</li>
+      <li>United States</li>
+      <li>Canada</li>
+    </ol>
+    <h3>Countries with Small Brown Bear Populations</h3>
+    <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+  </div>
+  <div id="media">
+    <h2>Media</h2>
+    <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" /><br />
+    <video src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" width="320" height="240" controls>
+      Video not supported
+    </video>
+  </div>
+</body>
+</html>
+
+
+
+
+
+----------------------------------------------
+
+
+Links para outras páginas:
+
+<a> --> anchor element
+
+Para funcionar tem que conter o atributo "href" que significa hyperlinl reference e é usado para links ou file paths.
+
+<a href="https://www.wikipedia.org/">This Is A Link To Wikipedia</a>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Brown Bears</title>
+</head>
+
+<body>
+  <h1>The Brown Bear</h1>
+  <div id="introduction">
+    <h2>About Brown Bears</h2>
+    <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
+      Atlas bear and the Himalayan brown bear.</p>
+    <a href="https://en.wikipedia.org/wiki/Brown_bear">Learn More</a>
+    <h3>Species</h3>
+    <ol>
+      <li>Arctos</li>
+      <li>Collarus</li>
+      <li>Horribilis</li>
+      <li>Nelsoni (extinct)</li>
+    </ol>
+    <h3>Features</h3>
+    <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+  </div>
+  <div id="habitat">
+    <h2>Habitat</h2>
+    <h3>Countries with Large Brown Bear Populations</h3>
+    <ol>
+      <li>Russia</li>
+      <li>United States</li>
+      <li>Canada</li>
+    </ol>
+    <h3>Countries with Small Brown Bear Populations</h3>
+    <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+  </div>
+  <div id="media">
+    <h2>Media</h2>
+    <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" />
+    <video src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" height="240" width="320" controls>Video not supported</video>
+  </div>
+</body>
+
+</html>
+
+
+
+----------------------------------------------
+
+
+Links com imagens:
+
+<a href="https://en.wikipedia.org/wiki/Opuntia" target="_blank"><img src="#" alt="A red prickly pear fruit"/></a>
+
+
+o elemento <img> tem que estar contido no elemento <a>!
+
+
+<a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"><img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" /></a>
+
+
+
+
+
+----------------------------------------------
+
+O atributo "target" do elemento <a> especifica se o link deve abrir noutra janela/separador.
+
+o valor "_blank" do atributo "target" indica que o link deve abrir noutra janela/separador!
+
+<a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">The Brown Bear</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">Learn More</a>
+
+
+----------------------------------------------
+
+
+
+Tambem podemos usar links para outras páginas locais dentro do diretório que estajamos a trabalhar ou o diretorio root.
+
+Para uma pagina local podemos indicar o caminho como "./index.html" para procurar dentro do diretorio que estamos a trabalhar.
+
+<a href="./contact.html">Contact</a> 
+(contact.html encontra-se na mesma pasta que index.html)
+
+
+
+<body>
+  <a href="./index.html">Brown Bear</a>
+  <a href="./aboutme.html">About Me</a>
+...
+
+
+
+----------------------------------------------
+
+
+
+Podemos utilizar o atributo "id" para descrever e distinguir o nosso conteudo no código e assim identifcarmos os elementos na mesma página.
+
+<p id="top"> This is the top of the page! </p>
+<h1 id="bottom">This is the bottom! </h1>
+
+
+E através de links e "id" podemos relacionar para uma navegação mais rápida na nossa página:
+
+<ol>
+  <li><a href="#top">Top</a></li>
+  <li><a href="#bottom">Bottom</a></li>
+</ol>
+
+
+<ul>
+    <li><a href="#introduction"> Introduction</a> </li>
+    <li><a href="#habitat"> Habitat </a></li>
+    <li><a href="#media"> Media </a></li>
+  </ul>
+
+
+----------------------------------------------
+
+
+Fazer ligações na mesma página ou noutras páginas chama-se navegação e existe uma tag especial chamada <nav> que permite guardar essas ligaçoes para ordenar e organizar o conteudo da pagina.
+
+<div> --> tag nao semantica ou seja nao identifica o conteudo que tem dentro de si
+
+<nav> --> tag semantica que identifica o conteudo que tem dentro de si
+
+
+...
+<nav>
+  <a href="./index.html">Brown Bear</a>
+  <a href="./aboutme.html">About Me</a>
+  </nav>
+  <h1>The Brown Bear</h1>
+  <nav>
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#habitat">Habitat</a></li>
+    <li><a href="#media">Media</a></li>
+  </ul>
+  </nav>
+...
+
+----------------------------------------------
+
+
+
+CODIGO FINAL:
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Brown Bears</title>
+</head>
+
+<body>
+  <nav>
+    <a href="./index.html">Brown Bear</a>
+    <a href="./aboutme.html">About Me</a>
+  </nav>
+  <h1>The Brown Bear</h1>
+  <nav>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#habitat">Habitat</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </nav>
+  <div id="introduction">
+    <h2>About Brown Bears</h2>
+    <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
+      Atlas bear and the Himalayan brown bear.</p>
+    <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">Learn More</a>
+    <h3>Species</h3>
+    <ol>
+      <li>Arctos</li>
+      <li>Collarus</li>
+      <li>Horribilis</li>
+      <li>Nelsoni (extinct)</li>
+    </ol>
+    <h3>Features</h3>
+    <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+  </div>
+  <div id="habitat">
+    <h2>Habitat</h2>
+    <h3>Countries with Large Brown Bear Populations</h3>
+    <ol>
+      <li>Russia</li>
+      <li>United States</li>
+      <li>Canada</li>
+    </ol>
+    <h3>Countries with Small Brown Bear Populations</h3>
+    <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+  </div>
+  <div id="media">
+    <h2>Media</h2>
+    <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" />
+    <video src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" height="240" width="320" controls>Video not supported</video>
+  </div>
+</body>
+
+</html>
+
+
+
+
+--------------------------------------------------------------------------------------------
+Proxima etapa do curso: HTML TABLES
+--------------------------------------------------------------------------------------------
+
+
+Criar uma tabela usa-se --> <table>
+
+Para criarmos linhas na tabela usamos a tag --> <tr>
+
+<table>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+</table>
+
+
+Para adicionarmos células/dados usamos a tag --> <td>
+
+<table>
+  <tr>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+Existe duas células com dados numa só linha!
+
+
+Para darmos titulos à informação na tabela usamos --> <th>
+Tem de estar contido numa linha(<tr>)
+
+
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+O titulo em branco cria uma celula extra para alinhar os titulos na sua informaçao correta.
+
+
+O atributo "scope" pode ter dois valores:
+  - row --> este valor indica que o titulo é para uma linha
+  - col --> este valor indica que o titulo é para uma coluna
+
+
+<table>
+    <tr>
+      <th>Company Name</th>
+      <th>Number of Items to Ship</th>
+      <th>Next Action</th>
+    </tr>
+    <tr>
+      <td>Adam's Greenworks</td>
+      <td>14</td>
+      <td>Package Items</td>
+    </tr>
+  </table>
+
+
+
+Podemos adicionar bordas à tabela usando o atributo "border" e indicar a sua espessura:
+
+<table border="1">
+  <tr>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+
+Mas para o mesmo efeito devemos utilizar border no CSS pois jã nao se usa no HTML.
+
+CSS border:
+
+table, td {
+  border: 1px solid black;
+}
+
+
+Podemos usar o atributo "colspan" para definar o numero de colunas que queremos:
+(usar dentro de uma linha[<tr>])
+
+<table>
+  <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+  </tr>
+  <tr>
+    <td colspan="2">Out of Town</td>
+    <td>Back in Town</td>
+  </tr>
+</table>
+
+
+Out of Town vai ficar ligado(ficar por baixo) de Monday e Tuesday enquanto Back in Town apenas irá ficar ligado(ficar por baixo) a Wednesday.
+
+
+----------------------------------------------
+
+Os dados também pode ter múltiplas linhas através do atributo rowspan:
+
+
+
+<table>
+  <tr> <!-- Row 1/Linha 1 -->
+    <th></th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+  <tr> <!-- Row 2/Linha 2 -->
+    <th>Morning</th>
+    <td rowspan="2">Work</td>
+    <td rowspan="3">Relax</td>
+  </tr>
+  <tr> <!-- Row 3/Linha 3 -->
+    <th>Afternoon</th>
+  </tr>
+  <tr> <!-- Row 4/Linha 4 -->
+    <th>Evening</th>
+    <td>Dinner</td>
+  </tr>
+</table>
+
+
+
+- A primeira linha contem uma celula vazia e duas colunas com titulos.
+
+- A segunda linha contem a linha com o titulo "Morning", junto com "Work" que cria duas linhas debaixo da coluna "Saturday". O "Relax" cria 3 linhas debaixo da coluna "Sunday"
+
+- A terceira linha contem o titulo "Afternoon"
+
+- A quarta linha contém "Dinner" ja que o "Relax" cria celula ao lado do mesmo.
+
+
+
+----------------------------------------------
+
+
+Podemos organizar uma tabela por secçoes com a tag --> <tbody>
+Contem todo o conteudo da tabela menos os titulos/headings.
+
+Para separamos os titulos usamos a tag <thead>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Morning</th>
+      <td rowspan="2">Work</td>
+      <td rowspan="3">Relax</td>
+    </tr>
+    <tr>
+     <th>Afternoon</th>
+    </tr>
+    <tr>
+      <th>Evening</th>
+      <td>Dinner</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+Para criarmos uma secção da ultima parte da tabela podemos usar a tag <tfoot>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Quarter</th>
+      <th>Revenue</th>
+      <th>Costs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Q1</th>
+      <td>$10M</td>
+      <td>$7.5M</td>
+    </tr>
+    <tr>
+      <th>Q2</th>
+      <td>$12M</td>
+      <td>$5M</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td>$22M</td>
+      <td>$12.5M</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+No exemplo acima podemos verficar que o <tfoot> cotem o total dos dados da tabela. Footers sao normalmente usados para conter somas, diferenças e outros dados de resultados.
+
+
+
+
+----------------------------------------------
+
+Por fim podemos usar CSS para personalizar a tabela como por exemplo:
+
+table, th, td {
+  border: 1px solid black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+----------------------------------------------
+
+
+CODIGO FINAL:
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ship To It - Company Packing List</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+  <ul class="navigation">
+    <li><img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-9/htmlcss1-img_logo-shiptoit.png" height="20px;"></li>
+    <li class="active">Action List</li>
+    <li>Profiles</li>
+    <li>Settings</li>
+  </ul>
+
+  <div class="search">Search the table</div>
+  <table>
+    <thead>
+    <tr>
+      <th>Company Name</th>
+      <th>Number of Items to Ship</th>
+      <th>Next Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Adam's Greenworks</td>
+      <td>14</td>
+      <td>Package Items</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Davie's Burgers</td>
+      <td rowspan="3">2</td>
+      <td>Send Invoice</td>
+    </tr>
+    <tr>
+      <td>Baker's Bike Shop</td>
+      <td>3</td>
+      <td>Send Invoice</td>
+    </tr>
+    <tr>
+      <td>Miss Sally's Southern</td>
+      <td>4</td>
+      <td>Ship</td>
+    </tr>
+    <tr>
+      <td>Summit Resort Rentals</td>
+      <td>4</td>
+      <td>Ship</td>
+    </tr>
+    <tr>
+      <td>Strike Fitness</td>
+      <td>1</td>
+      <td>Enter Order</td>
+    </tr>
+    </tbody>
+    <tfoot>
+      <td>Total</td>
+      <td>28</td>
+    </tfoot>
+  </table>
+
+
+</body>
+</html>
+
+
+
+--------------------------------------------------------------------------------------------
+
+
