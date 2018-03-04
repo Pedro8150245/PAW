@@ -1,0 +1,468 @@
+Curso CodeAcademy CSS:
+**********************
+-------------------------------------------
+INLINE STYLES:
+
+Embora o CSS seja uma linguagem diferente de HTML é possível escrever CSS
+diretamente no codigo HTML através do atributo style.
+
+
+<p style="color: red;">I'm learning to code!</p>
+
+O texto deste paragrafo irá a aparecer em vermelho com um tamanho de 20px!
+Para fechar o atributo é sempre necessário ; no fim!
+
+
+<p style="font-family: Arial;">The world is full of fascinating places. Planning the perfect vacation involves packing up, leaving home, and experiencing something new.</p>
+
+
+
+
+
+-------------------------------------------
+
+Para podermos alterar vários elementos diretamente no codigo HTML podemos utilizar a tag <style> que fica dentro da tag <head>
+
+<head>
+  <style>
+    p {
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+
+-------------------------------------------
+
+
+
+
+Para evitar a mistura de códigos HTML e CSS ambos sao feitos em ficheiros separados sendo o CSS do tipo de ficheiro .css
+
+
+Mas para isso precisamos de ligar ambos os ficheiros um ao outro e utilizamos a tag <link> no codigo HTML dento da tag <head>
+
+
+<link href="https://www.codecademy.com/stylesheets/style.css" type="text/css" rel="stylesheet">
+
+
+- href --> para indicarmos o caminho do ficheiro css
+
+- type --> para indicarmos o tipo de ficheiro que estamos a ligar
+
+- rel --> para indicar a relaçao entre os ficheiros, neste caso utilizamos "stylesheet" devido ser css.
+
+
+Através do href tambem podemos indicar o caminho do diretorio onde o ficheiro se encontra.
+
+<link href="./style.css" type="text/css" rel="stylesheet">
+
+
+
+
+-------------------------------------------
+
+Para altermos o estilo da pagina utilizamos o nome das tags para as alterar, exemplo:
+
+p {
+
+}
+
+Estamos a selecionar todos os parágrafos!
+
+h1{
+  color: maroon;
+}
+
+-------------------------------------------
+
+
+Também podemos selecionar através de classes (atributo "class") do codigo html para alterar no css.
+
+-HTML: <p class="brand">Sole Shoe Company</p>
+
+-CSS:
+
+.brand {
+
+}
+
+
+É necessario "." antes do nome da classe, para fazer a seleçao da mesma!
+
+
+h1{
+  color: maroon;
+}
+
+.title{
+  color: teal;
+}
+
+Neste caso o <h1> tinha como classe "title", sendo assim a cor dada à classe "title" irá sobrepor a cor dada aos titulos <h1>.
+
+
+-------------------------------------------
+
+
+No codigo HTML é possivel termos multiplas classes num só elemento, por exemplo se um titulo tiver de ser cor verde e texto a negrito entao podemos fazer:
+
+CSS:
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+HTML: <h1 class="green bold"> Exemplo </h1>
+
+
+Como podemos ver é possivel inserir várias classes ao separa-las por espaços!
+
+
+Outro exemplo:
+
+HTML: <h1 class="title uppercase">Top Vacation Spots</h1>
+
+CSS:
+
+.title{
+  color: teal;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+
+
+-------------------------------------------
+
+
+Se um determinado elemento HTML necessitar de ter um estilo proprio (mesmo tendo classes associadas) podemos adicionar um "id" ao elemento:
+
+<h1 id="large-title"> ... </h1>
+
+
+Para selecionar "id" no CSS usa-se "#" antes do nome do "id":
+
+#large-title {
+
+}
+
+
+Outro exemplo:
+
+CSS:
+
+#article-title{
+  font-family: cursive;
+  text-transform: capitalize;
+}
+
+
+HTML: <h1 id="article-title" class="title uppercase">Top Vacation Spots</h1>
+
+
+-------------------------------------------
+
+
+CSS consegue selecionar elementos html através de tags,classes e ids.
+
+As classes são para ser reutilizadas por vários elementos sendo assim deveremos fazer vários estilos de classe conforme o que é pedido.
+
+Enquanto o ID é apenas para um elemento, tendo a atençao que o estilo de ID sobrepoem o estilo de classes e tags.
+
+Ordem especifica:
+1ºID's
+2º Classes
+3º Tags
+
+
+
+Por exemplo:
+
+
+HTML: h1 class="headline">Breaking News</h1>
+
+CSS:
+
+h1 {
+  color: red;
+}
+
+.headline {
+  color: firebrick;
+}	
+
+
+Neste exemplo a cor do titulo seria "firebrick"
+
+
+A unica maneira de sobrepor um ID é adicionar outro ID com outro estilo!
+
+
+
+-------------------------------------------
+
+
+
+No CSS podemos tambem selecionar elementos HTML que tem contem uma certa classe, por exemplo:
+
+- Selecionar todos os elementos <h1> que tem como classe "special"
+
+h1.special {
+
+}
+
+Apenas seleciona os elementos <h1> que tem a classe "special"!
+
+Outro exemplo:
+
+h2.destination{
+  font-family:cursive;
+}
+
+
+
+-------------------------------------------
+
+Também podemos selecionar através das classes elementos dentro de outros elementos html como por exemplo:
+
+
+HTML:
+<ul class='main-list'>
+  <li> ... </li>
+  <li> ... </li>
+  <li> ... </li>
+</ul>
+
+
+
+CSS:
+
+.main-list li {
+  color: teal;
+}
+
+os elementos <li> apenas sao selecinados por serem adicionados a frente do ".main-list" e separado por espaço!
+
+
+-------------------------------------------
+
+
+
+p {
+  color: blue;
+}
+
+
+.main p {
+  color: red;
+}
+
+
+Este exemplo demonstra que apenas os elementos <p> que estão dentro do elemento/classe ".main" serão vermelhos! Apesar de existir a regra geral que os elementos <p> são azuis.
+
+O mesmo se adequa para este exemplo:
+
+.description h5{
+  color: teal;
+}
+
+h5{
+  color: rebeccapurple;
+  
+}
+
+
+-------------------------------------------
+
+
+Existo algo mais especifico(sobrepoem) os "id" que é "!important" que pode ser aplicado em certos atributos em vez de regras.
+
+Sobrepoem qualquer estilo nao interessando o quanto especifico é! Daí quase nunca deve ser usado!
+
+Exemplo:
+
+p {
+  color: blue !important;
+}
+
+
+.main p {
+  color: red;
+}
+
+
+Como a flag "!important" se encontra no seletor "p" e sobrepoem qualquer coisa, todos os elementos <p> irão aparecer em azul, apesar do ".main p" ser mais especifico que "p".
+
+A flag "!important" só recomendade quando um elemento aparece 100% da mesma maneira a todo tempo! (o que é quase improvável daí ser evitado)
+
+
+Outro exemplo:
+
+.description h5{
+  color: teal;
+}
+
+h5{
+  color: rebeccapurple !important;
+  
+}
+
+
+
+-------------------------------------------
+
+
+Podemos dar um certo estilo, a dois seletores ao mesmo tempo em vez de tarmos a repetir codigo, por exemplo:
+
+- Aqui estamos a repetir codigo..
+
+h1 {
+  font-family: Georgia;
+}
+
+.menu {
+  font-family: Georgia;
+}
+
+
+- SOLUÇÃO!
+
+h1, 
+.menu {
+  font-family: Georgia;
+}
+
+
+Apenas separamos os seletores/elementos por "," e podemos dar o mesmo estilo em vez de tarmos a repetir codigo.
+
+
+Outro exemplo: 
+
+p,h5 {
+      font-family: Georgia;
+}
+
+
+-------------------------------------------
+
+CODIGO CSS FINAL:
+
+p,h5 {
+      font-family: Georgia;
+}
+
+h1{
+  color: maroon;
+}
+
+.title{
+  color: teal;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.cursive{
+  font-family:cursive;
+}
+
+.publish-time{
+  color:gray;
+}
+
+.capitalize{
+  text-transform:capitalize;
+}
+
+h2.destination{
+  font-family:cursive;
+}
+
+.description h5{
+  color: teal;
+}
+
+
+*********************************************************
+CODIGO HTML:
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vacation World</title>
+  <link href="./style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/explorer.jpeg" />
+  <h1 class="title cursive capitalize">Top Vacation Spots</h1>
+  <h5>By: Stacy Gray</h5>
+  <h6 class="publish-time">Published: 2 Days Ago</h6>
+
+  <p>The world is full of fascinating places. Planning the perfect vacation involves packing up, leaving home, and experiencing something new.</p>
+
+  <h2 class="destination">1. Florence, Italy</h2>
+  <div class="description">A city-size shrine to the Renaissance, Florence offers frescoes, sculptures, churches, palaces, and other monuments from the richest cultural flowering the world has known. Names from its dazzling historical pastDante, Michelangelo, Galileo, Machiavelliare some of the most resonant of the medieval age. <a href="http://travel.nationalgeographic.com/travel/city-guides/florence-italy/" target="_blank">Learn More</a>.
+    <h5>Top Attractions</h5>
+    <ul>
+      <li>Museums</li>
+      <li>Bike Tours</li>
+      <li>Historical Monuments</li>
+    </ul>
+  </div>
+
+  <h2 class="destination">2. Beijing, China</h2>
+  <div class="description">A city in the midst of reinventing itself and continuing to build on the success of the 2008 Summer Olympics, Beijing is a place of frenzied construction. New housing, new roads, and new sports venues seem to spring up overnight. At the same time, the capital of the Peoples Republic of China remains an epicenter of tradition, with the treasures of nearly 2,000 years as the imperial capital still on viewin the famed Forbidden City and in the luxuriant pavilions and gardens of the Summer Palace.
+    <a href="http://travel.nationalgeographic.com/travel/city-guides/beijing-china/" target="_blank">Learn More</a>.
+    <h5>Top Attractions</h5>
+    <ul>
+      <li>Biking</li>
+      <li>Historical Sites</li>
+      <li>Restaurants and Dining</li>
+    </ul>
+  </div>
+
+  <h2 class="destination">3. Seoul, South Korea</h2>
+  <div class="description">The Korean capital is a city of contrasts. Fourteenth-century city gates squat in the shadow of 21st-century skyscrapers, while the broad Han River is back-dropped by granite mountains rising in the city centercomplete with alpine highways speeding around their contours and temples nestling among their crags. Fashionable, gadget-laden youths battle for sidewalk space with fortune-tellers and peddlers, while tiny neighborhoods of traditional cottages contrast with endless ranks of identical apartments.
+    <a href="http://travel.nationalgeographic.com/travel/city-guides/seoul-south-korea/" target="_blank">Learn More</a>.
+    <h5>Top Attractions</h5>
+    <ul>
+      <li>Parasailing</li>
+      <li>Segway Tours</li>
+      <li>Spas and Resorts</li>
+    </ul>
+  </div>
+
+  <h2> More Desinations </h2>
+  <ul>
+    <li><h4 class="destination">Jackson Hole, Wyoming</h4></li>
+    <li><h4 class="destination">Cape Town, South Africa</h4></li>
+    <li><h4 class="destination">La Paz, Bolivia</h4></li>
+  </ul>
+
+  <p>&mdash;Best of luck with your travels, and be sure to send pictures and stories. We"d love to hear them!</p>
+
+
+</body>
+
+</html>
+
+
+
+--------------------------------------------------------------------------------------
+FIM 1º ETAPA DO CURSO
+--------------------------------------------------------------------------------------
+
+
