@@ -462,7 +462,303 @@ CODIGO HTML:
 
 
 --------------------------------------------------------------------------------------
-FIM 1º ETAPA DO CURSO
+FIM 1º ETAPA DO CURSO - 2º ETAPA VISUAL RULES
 --------------------------------------------------------------------------------------
+
+
+Este exemplo mete todos os elementos <h1> em azul
+
+h1 {
+  color: blue;
+}
+
+
+Para estilizar em CSS as declaraçoes de estilo consiste em propriedade e valor:
+
+- Propriedade --> size,color,etc
+
+- Valor --> 18px for size, blue for color, etc
+
+Para acabar uma declaração acabamos com ";"
+
+
+
+-------------------------------------------
+
+
+para mudarmos o tipo de letra utilizamos "font-family":
+
+h1 {
+  font-family: Garamond;
+}
+
+
+Ter atenção:
+
+- A fonte escolhida tem de estar instalada no computador onde tiver a abrir a página para o utilizador poder ver esse tipo de letra na pagina web.
+
+- A letra por defeito no HTML é "Times New Roman" se nao for definido o "font-family" é tomado por defeito o tipo de letra "Times New Roman".
+
+- É bom limitar os tipos de letra entre 2 a 3 para a pagina carregar mais rapido e faz parte de um bom design.
+
+- se o nome do tipo de letra consistir em mais que uma palavra utilizamos ("") como por exemplo: font-family: "Courier New"
+
+
+
+
+-------------------------------------------
+
+Também podemos alterar o tamanho do texto da nossa pagina através do "font-size":
+
+p {
+  font-size: 18px;
+}
+
+px --> pixels
+
+
+
+-------------------------------------------
+
+
+Podemos alterar a espessura do texto através do "font-weight":
+
+p {
+  font-weight: bold;
+}
+
+Neste exemplo, todos os parágrafos irão a aparecer em negrito.
+
+Opçoes: bold, thin e normal(caso o resto da pagina esteja bold ou thin).
+
+
+
+-------------------------------------------
+
+
+Por defeito o texto está alinhado ao lado esquerdo da pagina mas podemos alterar através do "text-align":
+
+h1 {
+  text-align: right;
+}
+
+Opçoes: left, right ou center.
+
+
+
+-------------------------------------------
+
+
+Podemos alterar dois tipos de cor:
+
+- Foreground color --> elementos --> "color: red;"
+
+- Background color --> fundos --> "background-color: blue;"
+
+
+Exemplo:
+
+h1 {
+  color: red;
+  background-color: blue;
+}
+
+O texto irá ser vermelho e o seu fundo será azul!
+
+
+-------------------------------------------
+
+
+Podemos alterar a opacidade dos elementos (0-100%) através do "opacity":
+
+.overlay {
+  opacity: 0.5;
+}
+
+Neste exemplo o ".overlay" está 50% visivel!
+
+
+
+.caption {
+  display: block;
+  ...
+  ...
+  opacity:0.75;
+}
+
+
+
+
+-------------------------------------------
+
+
+Podemos alterar o background/fundo da nossa pagina com imagens através do "background-image":
+
+.main-banner {
+  background-image: url("https://www.example.com/image.jpg");
+}
+
+- o "url" pode ser um link, ficheiro dentro do nosso projeto (indicamos o caminho da pasta)
+
+
+Outro exemplo, com imagem dentro de uma pasta:
+
+
+.main-banner {
+  background-image: url("images/mountains.jpg");
+}
+
+
+
+
+-------------------------------------------
+
+
+CODIGO CSS FINAL:
+
+
+
+body {
+  /* Old browsers */
+  background: #141E30;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, #35577D, #141E30);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, #35577D, #141E30);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 2em;
+  padding-top: 100px;
+  width: 100%;
+  font-family:Georgia;
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 24px;
+  padding-bottom: 30px;
+  text-align: left;
+  width: 70%;
+  font-family:Georgia;
+}
+
+p {
+  color: AliceBlue;
+  line-height: 1.3em;
+  text-align: left;
+  width: 100%;
+  font-family:Helvetica;
+  font-size: 18px;
+  font-weight:bold;
+}
+
+.byline {
+  font-family: Helvetica;
+  color: rgba(255, 255, 255, 0.5);
+  float: left;
+  font-size: 14px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.caption {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 14px;
+  margin-left: 20px;
+  padding: 10px;
+  position: relative;
+  top: 80%;
+  width: 60%;
+  background-color: white;
+  color:black;
+  opacity:0.75;
+}
+
+.content {
+  padding: 40px;
+}
+
+.image {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/soccer.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.writer-img {
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  float: left;
+  width: 50px;
+}
+
+
+
+
+**********************************************************
+
+
+CODIGO HTML:
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Rise of Soccer in The US</title>
+
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="content">
+    <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-4/htmlcss1-img_writer-avatar.jpg" class="writer-img">
+    <h3 class="byline">Article By: Jane Dover</h3>
+    <h1>How the Rise of Soccer in the US Is Changing the Face of Youth Sports</h1>
+    <h2>The focus on soccer in youth sports programs is exploding nation-wide</h2>
+    <p>When the first World Cup arrived in the US in the 90's everyone officially declared that soccer was it. Well it's taken it's time but we can definitely see the influence of soccer, especially women's soccer, across the US. This year, 3 million kids
+      played in youth soccer leagues with 2/3 of those leagues for girls. In fact, in the 12-17 age range the MLS has surpassed the MLB and NFL in popularity.</p>
+    <p>Part of this meteoric rise can be attributed to the impressively soaring ad dollars being pumped into the Women's World Cup games in 2014. The women's games generated $40 million for Fox, that's definitely not chump change. And those advertisers,
+      like ATT, Coca Cola, Verizon, Nike, Visa, and other heavy hitters, are working to make sure they see those numbers grow year after year by investing in youth soccer facilities and promoting programs across the country. </p>
+    <p>Now that big business is involved you can be assured you'll see a continued rise in popularity in soccer across the country for years to come. </p>
+  </div>
+
+  <div class="image">
+    <p class="caption">The local semi- pro soccer team in Seattle, WA plays an international friendly</p>
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------
+FIM 2º ETAPA DO CURSO --> VISUAL RULES
+--------------------------------------------------------------------------------------
+
+
+
+
+
 
 
