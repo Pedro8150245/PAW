@@ -1,0 +1,168 @@
+LOOPS:
+******
+
+
+There are two kinds of loops we will learn in this lesson:
+
+--> for loops, which let us loop a block of code a known amount of times.
+
+--> while loops, which let us loop a block of code an unknown amount of times.
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+let vacationSpots = ['Tokyo', 'Shinjuku','Italy'];
+
+console.log(vacationSpots[0]);
+console.log(vacationSpots[1]);
+console.log(vacationSpots[2]);
+console.log("\n");
+
+//com For
+
+
+for(let i=0;i<vacationSpots.length;i++){
+  console.log(vacationSpots[i]);
+}
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+let vacationSpots = ['Tokyo', 'Shinjuku','Italy'];
+
+for(let vacationSpotIndex=0;vacationSpotIndex<vacationSpots.length;vacationSpotIndex++){
+  console.log('I would love to visit ' + vacationSpots[vacationSpotIndex]);
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+FOR AO CONTRÁRIO:
+
+
+
+
+let vacationSpots = ['Tokyo', 'Shinjuku','Italy'];
+
+for(let vacationSpotIndex=vacationSpots.length-1;vacationSpotIndex >= 0;vacationSpotIndex--){
+  console.log('I would love to visit ' + vacationSpots[vacationSpotIndex]);
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Igualar elementos com dois FOR:
+
+
+
+
+let myPlaces = ['Houston', 'Sioux Falls', 'Phoenix'];
+
+let friendPlaces = ['Sioux Falls', 'Missoula', 'Buffalo'];
+
+for (let myPlacesIndex = 0; myPlacesIndex < myPlaces.length; myPlacesIndex++) {
+  for (let friendPlacesIndex = 0; friendPlacesIndex < friendPlaces.length; friendPlacesIndex++) {
+		if (myPlaces[myPlacesIndex] === friendPlaces[friendPlacesIndex]) {
+      console.log(friendPlaces[friendPlacesIndex]);
+    }
+  }
+}
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ciclo WHILE:
+
+
+
+let cards = ['Diamond', 'Spade', 'Heart', 'Club'];
+let currentCard = 'Heart';
+
+while(currentCard !== 'Spade'){
+  console.log(currentCard);
+  currentCard = cards[Math.floor(Math.random() * 4)];
+}
+
+console.log('\nfound a spade');
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--> utilização de "break" para ciclos infinitos!
+
+let flag = true;
+let counter = 0;
+while(flag === true){
+  console.log(counter);
+  counter+=1;
+  if (counter === 37){
+    break;
+  }
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Review: Loops
+
+Great job! In this lesson, we learned how to write less repetitive code with loops.
+
+for loops allow us to repeat a block of code a known amount of times.
+
+We can use a for loop inside another for loop to compare two lists.
+
+while loops are for looping over a code block an unknown amount of times.
+
+Infinite loops occur when stop conditions are never met.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

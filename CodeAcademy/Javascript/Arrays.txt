@@ -1,0 +1,189 @@
+ARRAYS
+******
+
+
+let newYearsResolutions= ["ola","ola","ola"];
+console.log(newYearsResolutions);
+
+
+OUTPUT:
+
+[ 'ola', 'ola', 'ola' ]
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+let newYearsResolutions = ['Rappel into a cave', 'Take a falconry class', 'Learn to juggle'];
+
+console.log(newYearsResolutions[0]);
+// Output: 'Rappel into a cave'
+
+
+let hello = 'Hello World';
+console.log(hello[6]);
+// Output: W
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+Update Elements
+
+
+let newYearsResolutions= ["ola","ola2","ola3"];
+let listItem = newYearsResolutions[0];
+newYearsResolutions[1] = 'Learn a new language';
+
+console.log(listItem);
+console.log(newYearsResolutions[3]);
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+length property
+
+
+let newYearsResolutions= ["ola","ola2","ola3"];
+console.log(newYearsResolutions.length); 
+
+OUTPUT: 3
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+.push() Method
+
+
+
+let newYearsResolutions = ['item 0', 'item 1', 'item 2'];
+
+newYearsResolutions.push('item 3', 'item 4');
+
+
+OUTPUT: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4'];
+
+
+
+
+
+.pop() Method
+
+
+
+let newYearsResolutions = ['item 0', 'item 1', 'item 2'];
+
+newYearsResolutions.pop();
+
+console.log(newYearsResolutions); 
+// Output: [ 'item 0', 'item 1' ]
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+More Array Methods
+
+
+--> .join()
+
+--> .slice(): seleciona elementos a partir de uma posição a outra, exemplo --> console.log(groceryList.slice(1, 4)); - ira imprimir a posiçao 1, 2 e 3.
+NOTA: não modifica o array!
+
+--> .splice()
+
+--> .shift(): apaga o elemento da primeira posiçao(0)
+
+--> .unshift(): adicina um elemento na primeira posiçao(0)
+
+--> .concat()
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Arrays with let and const
+
+
+
+"...arrays that are declared with const remain mutable, or changeable.
+This means that we can change the contents of an array, but cannot reassign the variable name to a new array or other data type."
+
+
+
+
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments.push('Chilli Sauce');
+condiments = ['Chilli Sauce']; //Funciona
+console.log(condiments);
+
+utensils.pop();
+console.log(utensils);
+utensils = ['Spork']; //Não funciona!
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Review Arrays
+
+
+Nice work! In this lesson, we learned these concepts regarding arrays:
+
+Arrays are lists and are a way to store data in JavaScript.
+
+Arrays are created with brackets [].
+
+Each item inside of an array is at a numbered position, starting at 0.
+
+We can access one item in an array using its numbered position, with syntax like: myArray[0].
+
+We can also change an item in an array using its numbered position, with syntax like myArray[0] = "new string";
+
+Arrays have a length property, which allows you to see how many items are in an array.
+
+Arrays have their own methods, including .push() and .pop(), which add and remove items from an array, respectively.
+
+Arrays have many other methods that perform different functions, such as .slice() and .shift().
+You can read the documentation for any array method on the Mozilla Developer Network website.
+
+Variables that contain arrays can be declared with let or const. 
+Even when declared with const, arrays are still mutable; they can be changed. 
+However, a variable declared with const cannot be reassigned.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
