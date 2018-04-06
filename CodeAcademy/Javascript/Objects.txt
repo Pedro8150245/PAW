@@ -1,0 +1,476 @@
+OBJECTS
+*******
+____________________________________________________________________________________________________________________________________________
+
+
+Objects:
+
+let restaurant = {
+  name: 'Italian Bistro',
+  seatingCapacity: 120,
+  hasDineInSpecial: true,
+  entrees: ['Penne alla Bolognese', 'Chicken Cacciatore', 'Linguine Pesto']
+};
+
+
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40
+};
+
+____________________________________________________________________________________________________________________________________________
+
+
+
+Accessing Object Properties I
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40
+};
+
+console.log(person.name);
+console.log(person.age);
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+
+Accessing Object Properties II
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40
+};
+
+console.log(person["name"]);
+console.log(person["age"]);
+
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+Accessing Object Properties III
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+let day ='Thursday';
+let alarm;
+
+if(day==='Saturday' || day==='Sunday'){
+  alarm = 'weekendAlarm';
+}else{
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+Adding a Property
+
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+let day ='Thursday';
+let alarm;
+
+if(day==='Saturday' || day==='Sunday'){
+  alarm = 'weekendAlarm';
+}else{
+  alarm = 'weekAlarm';
+}
+
+person.hobbies = ['Jogar','Musica'];
+console.log(person[alarm]);
+console.log(person['hobbies']);
+
+
+
+
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+Editing a Property
+
+
+
+
+
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+let day ='Thursday';
+let alarm;
+
+if(day==='Saturday' || day==='Sunday'){
+  alarm = 'weekendAlarm';
+}else{
+  alarm = 'weekAlarm';
+}
+
+person.hobbies = ['Jogar','Musica'];
+person.hobbies = ['Jogar'];
+console.log(person[alarm]);
+console.log(person.hobbies);
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+
+Methods
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  
+  sayHello: () => {
+  	return "Hello, there!"
+	}
+};
+
+let day ='Thursday';
+let alarm;
+
+if(day==='Saturday' || day==='Sunday'){
+  alarm = 'weekendAlarm';
+}else{
+  alarm = 'weekAlarm';
+}
+
+person.hobbies = ['Jogar','Musica'];
+person.hobbies = ['Jogar'];
+console.log(person[alarm]);
+console.log(person.hobbies);
+console.log(person.sayHello());
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+Methods: ES6
+
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  
+  sayHello: () => {
+  	return "Hello, there!"
+	},
+  
+  //Maneira mais recente de criar função
+  sayGoodbye() {
+  	return "Goodbye!";
+	}
+};
+
+let day ='Thursday';
+let alarm;
+
+if(day==='Saturday' || day==='Sunday'){
+  alarm = 'weekendAlarm';
+}else{
+  alarm = 'weekAlarm';
+}
+
+person.hobbies = ['Jogar','Musica'];
+person.hobbies = ['Jogar'];
+console.log(person[alarm]);
+console.log(person.hobbies);
+console.log(person.sayHello());
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+The this Keyword I
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  
+  sayHello: function() {
+    //usar ` ` em vez de " " para isto funcionar
+    return `Hello, my name is ${this.name}`;
+  },
+  
+  sayGoodbye() {
+    return 'Goodbye!';
+  }
+  
+};
+
+console.log(person.sayHello());
+
+person.hobbies = ['Basketball', 'Coaching'];
+person.hobbies = ['Basketball'];
+console.log(person.hobbies);
+
+
+console.log(person['name']);
+console.log(person['age']);
+
+let day = 'Tuesday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday' ) {
+  alarm = 'weekendAlarm';
+} else {
+  alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+The this Keyword II
+
+
+let person = {
+  name: 'Tyron',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM',
+  
+  sayHello: function() {
+    return `Hello, my name is ${this.name}`;
+  },
+  
+  sayGoodbye() {
+    return 'Goodbye!';
+  }
+  
+};
+
+let friend = {
+  name: 'Alex'
+}
+
+friend.sayHello = person.sayHello;
+console.log(person.sayHello());
+console.log(friend.sayHello());
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+Getters and Setters I
+
+
+Getter and setter methods = get and set (java)
+
+set --> setter
+
+get --> getter
+
+
+We prepended the property names with underscores (_). 
+Developers use an underscore before a property name to indicate a property or value should not be modified directly by other code. 
+We recommend prepending all properties with an underscore, and creating setters for all attributes you want to access later in your code.
+
+
+
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn;
+    }
+    else {
+      console.log('Invalid input');
+      return 'Invalid input';
+    }
+  }
+
+};
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+Getters and Setters II
+
+
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn;
+    }
+    else {
+      console.log('Invalid input');
+      return 'Invalid input';
+    }
+  }
+
+};
+
+person.age = 'Thirty-nine'; //Invalid Input
+person.age = 39; //Valid Input
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+Getters and Setters III
+
+
+ We call the getter method the same way we would access a property without a method:
+
+restaurant.seatingCapacity = 150;
+const seats = restaurant.seatingCapacity;
+
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  
+  set age(ageIn) {
+    if (typeof ageIn === 'number') {
+      this._age = ageIn;
+    }
+    else {
+      console.log('Invalid input');
+      return 'Invalid input';
+    }
+  },
+  
+  get age() {
+    console.log(`${this._name} is ${this._age} years old.`);
+    return this._age;
+  }
+
+};
+
+
+
+console.log(person.age);
+
+
+
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
+
+
+Review: Objects
+
+Way to go! Let's review what we learned in this lesson:
+
+Objects store key-value pairs and let us represent real-world things in JavaScript.
+
+Properties in objects are separated by commas. Key-value pairs are always separated by a colon.
+
+You can add or edit a property within an object with dot notation.
+
+A method is a function in an object.
+
+this helps us with scope inside of object methods. this is a dynamic variable that can change depending on the object that is calling the method.
+
+Getter and setter methods allow you to process data before accessing or setting property values.
+
+
+
+
+
+
+
+
+
+____________________________________________________________________________________________________________________________________________
+
